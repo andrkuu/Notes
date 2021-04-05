@@ -1,21 +1,9 @@
----
-name: Xamarin.Forms - Notes (styled)
-description: "A Xamarin.Forms application that's styled with XAML styles (get started)"
-page_type: sample
-languages:
-- csharp
-products:
-- xamarin
-extensions:
-    tags:
-    - getstarted
-urlFragment: getstarted-notes-styled
----
-# Notes (styled)
+Xamarin rakendus mis lubab lisada märkmeid ning neid salvestada.
+Võimalus märkmetele ligipääeseda ka rakenduse sulgemisel.
 
-This sample demonstrates a Xamarin.Forms application that's styled with XAML styles.
+Tehtud https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/ põhjal
+Andmete salvestamine toimub SQLite abil
 
-For more information about the sample see [Style a Cross-Platform Xamarin.Forms Application](https://docs.microsoft.com/xamarin/get-started/quickstarts/styled).
-
-![Notes (styled) application screenshot](Screenshots/01All.png "Notes (styled) application screenshot")
+Raskused:
+Seadetesse lisatud internal või external salvestuskoha muutmine. Mingi põhjusega seadete muutmine rakenduse sees ei muuda andmebaasi salvestuskohta. Kuid kui muuta see ära koodis manuaalselt toimib kõik ilusti.
 
