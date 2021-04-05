@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.AboutPage"
+             Title="Settings">
+    <!-- Layout children in two rows -->
+    <Grid RowDefinitions="Auto,*">
+        <Image Source="xamarin_logo.png"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
+               VerticalOptions="Center" 
+               HeightRequest="64" />
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Margin="{StaticResource PageMargin}"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Notes" 
+                                  FontAttributes="Bold" 
+                                  FontSize="22" />
+                            <Span Text=" v1.0" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <StackLayout>
+                <Label Text="Saving location" />
+
+                <RadioButton x:Name="InternalButton" Content="Internal" IsChecked="true"/>
+                <RadioButton x:Name="ExternalButton" Content="External"  />
+
+            </StackLayout>
+            <Button Text="Save"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
